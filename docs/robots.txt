@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://PinCraneUpgrade.github.io/restore-windows-photo-viewer/sitemap.xml
